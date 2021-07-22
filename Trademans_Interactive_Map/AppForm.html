@@ -1,0 +1,99 @@
+<!-- 
+Author: Aidan McErlean (B00774911)
+Date: 06/12/2020
+Description: This is the app page. The main function of this page
+is to allow the user to use the interactive map and find services
+such as joiners, electical and plumber within a local area
+-->
+
+<!DOCTYPE html> 
+
+
+<html>
+<head>
+  <title>TradeHelper</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+  <!-- Calling Map.js -->  
+  <script src="js/map.js"></script>
+        
+</head>
+
+<!-- Navigation Menu & Logo -->
+<body>
+  <div id="main">
+    <div class = "logo">
+      <img src="images/logo.png">
+    </div>
+	<header>
+	  <nav>
+	    <div id="menubar">
+          <ul id="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="AppForm.html">App/Form</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="About.html">About</a></li>
+          </ul>
+        </div>	
+      </nav>
+    </header>
+    
+    <!-- Slogan -->
+	<div id="site_content">		
+	  <div id="strapline">
+	    <div id="welcome_slogan">
+	      <h3>Welcome To The App</h3>
+	    </div>
+      </div>
+        
+    <!-- Selection Menu Bar -->
+    <div class = "areas">
+      <select id="areas">
+        <option value=0>Nothern Ireland</option>
+        <option value=1>Antrim</option>
+        <option value=2>Armagh</option>
+        <option value=3>Ballycastle</option>
+        <option value=4>Ballymena</option>
+        <option value=5>Ballynahinch</option>
+        <option value=6>Banbridge</option>
+        <option value=7>Bangor</option>
+        <option value=8>Belfast</option>
+        <option value=9>Carrickfergus</option>
+        <option value=10>Coleraine</option>
+        <option value=11>Cooktown</option>
+        <option value=12>Derry</option>
+        <option value=13>Downpatrick</option>
+        <option value=14>Enniskillen</option>
+        <option value=15>Larne</option>
+        <option value=16>Limavady</option>
+        <option value=17>Newcastle</option>
+        <option value=18>Newry</option>
+        <option value=19>Omagh</option>
+        <option value=20>Starbane</option>
+      </select>
+    </div>
+    
+    <!-- ID Map -->
+	<div id = "map"></div>
+        
+    <!-- Buttons For Flitering Service -->
+    <div id = "buttons">
+      <img onclick="plumbers(1)" src="icons/plumber.png" onmouseover="src='icons/plumberon.png'" onmouseout="src='icons/plumber.png'"/ >
+      <img onclick="electrician(1)" src="icons/ele.png" onmouseover="src='icons/eleon.png'" onmouseout="src='icons/ele.png'"/ >
+      <img onclick="joiner(1)" src="icons/joiner.png" onmouseover="src='icons/joineron.png'" onmouseout="src='icons/joiner.png'"/ >
+    </div>
+        
+    <!-- Calling API Google Libraries -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkYOt6JmP5D1ohskN74-Gn6rk6_B36UjU&callback=initMap"></script>
+        
+    <!-- Footer With Another Navigation System -->
+    <footer>
+	  <a href="index.html">Home</a> | <a href="AppForm.html">App/Form</a> | <a href="contact.html">Contact Us</a> | <a href="About.html">About</a> | <br/><br/>
+    </footer>  
+  </div>
+</div>
+</body>
+</html>
